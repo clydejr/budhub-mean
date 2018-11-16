@@ -1,0 +1,14 @@
+{
+  "name": "budhub2",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.8",
+    "gmaps": "^0.4.24",
+    "sweetalert": "^1.1.3"
+  }
+}

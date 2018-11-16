@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Budhub</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="lib/sweetalert/dist/sweetalert.css">
+</head>
+<body ng-controller="AppCtrl" ng-init="startMap()">
+
+
+<h1>Budhub</h1>
+<!-- Button trigger modal -->
+<button ng-show="!loading" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+post
+</button>
+
+<div ng-show="loading" class="loading">
+<h1>Loading... </h1>
+</div>
+<div ng-show="!loading" id="map" class="map"></div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">make post</h4>
+      </div>
+      <div class="modal-body">
+
+      <input class="form-control" placeholder="price" ng-model="data.price">
+      <br>
+      <input class="form-control" placeholder="phone #" ng-model="data.phone">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="createPost(data)">post</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+
+<script src="lib/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="lib/gmaps/gmaps.min.js"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
